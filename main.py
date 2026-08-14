@@ -247,9 +247,7 @@ async def kick_lua_cmd(ctx, uid: str = None):
     end
     threadpool:wait(0.1)
     AccountManager.cluster.buddysvr.routemore('gm.kick', targetToCheck, 0)
-    if ShowGameTipsWithoutFilter then
-        ShowGameTipsWithoutFilter("#cff0000Kick sent to UID: " .. "{uid}" .. " (Real: " .. targetToCheck .. ")")
-    end
+
 end)"""
 
     embed = discord.Embed(title="Kick Player (Lua)", description=f"Processing kick for UID `{uid}` (Real UIN: `{real_uin}`)...", color=0xffff00)
